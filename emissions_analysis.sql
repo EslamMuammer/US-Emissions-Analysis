@@ -1,4 +1,8 @@
 SELECT
+    *
+FROM emissions_data;
+
+SELECT
     county_state_name,
     population,
     CAST(REPLACE(`GHG emissions mtons CO2e`, ',', '') AS DOUBLE) / NULLIF(population, 0) AS emissions_per_capita
